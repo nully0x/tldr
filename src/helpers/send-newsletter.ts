@@ -171,8 +171,8 @@ const sendNewsletter = async (): Promise<void> => {
     // await mailchimp.campaigns.send(campaignResponse.id);
 
     console.log("Newsletter sent successfully");
-  } catch (error) {
-    console.error(`Failed to send newsletter: ${error}`);
+  } catch (error:any) {
+    throw error(`Failed to send newsletter: ${error}`);
   }
 };
 

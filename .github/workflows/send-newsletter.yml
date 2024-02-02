@@ -2,9 +2,8 @@ name: Send Newsletter
 
 on: 
   workflow_dispatch:
-  repository_dispatch:
   schedule:
-    - cron: "0 3 * * *"   # This line sets the action to run at 3AM every day
+    - cron: "0 12 * * 1"   # This line sets the action to run at 12m every Monday
 
 jobs:
   build:

@@ -52,7 +52,7 @@ function generateHTMLTemplate(data: NewsLetterDataType) {
   // Split the summary into words
   let words = data.summary_of_threads_started_this_week.split(" ");
   // Take the first 300 words
-  let summary = words.slice(0, 100).join(" ");
+  let summary = words.slice(0, 300).join(" ");
   // Convert the summary to HTML using marked
   let summaryHtml = marked(summary);
 

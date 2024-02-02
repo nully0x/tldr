@@ -90,7 +90,7 @@ function generateHTMLTemplate(data: NewsLetterDataType) {
       margin-bottom: 20px;
     }
     
-    a {
+    a {https://mailchimp.com/developer/marketing/api/campaign-content/
       color: #EEC759;
       text-decoration: none;
     }
@@ -173,7 +173,9 @@ const sendNewsletter = async (): Promise<void> => {
     console.log("Newsletter sent successfully");
   } catch (error:any) {
     throw error(`Failed to send newsletter: ${error}`);
-  }
+
+  } catch (error) {
+    
 };
 
 sendNewsletter();
